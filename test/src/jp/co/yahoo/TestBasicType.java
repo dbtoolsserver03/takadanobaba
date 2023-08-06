@@ -32,7 +32,6 @@ public class TestBasicType {
 		System.out.println(ch);
 		System.out.println(chVal);
 		
-		boolean retNo = false;
 		boolean retYes = true;
 		System.out.println(retYes);
 		
