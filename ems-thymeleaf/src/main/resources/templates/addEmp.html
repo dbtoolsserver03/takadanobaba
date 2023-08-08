@@ -69,7 +69,13 @@
 						</table>
 						<p>
 							<input type="submit" class="button" value="确认添加" />
-							<input type="submit" class="button" value="返回列表" />
+							<input type="button" class="button"  value="返回列表" onclick="returnEmployeeLst()"/>
+							<script>
+								function returnEmployeeLst() {
+									location.href = '[[@{/employee/lists}]]';
+								}
+								
+							</script>
 						</p>
 					</form>
 				</div>

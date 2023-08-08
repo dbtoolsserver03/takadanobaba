@@ -18,6 +18,4 @@ public class DemoController {
         model.addAttribute("msg","hello thymeleaf");
         return "demo";
     }
-
-
 }
