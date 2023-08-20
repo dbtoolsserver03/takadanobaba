@@ -59,7 +59,7 @@ public class TestLoop {
 			String str = strArr[index];
 			System.out.println(str);
 		}
-		
+
 		// 对于从头到尾的，不需要下标索引，速度比较快
 		System.out.println("for each");
 		for (String str : strArr) {

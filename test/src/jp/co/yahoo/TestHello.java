@@ -2,7 +2,6 @@
  * 
  */
 package jp.co.yahoo;
-
 /**
  * 
  */
@@ -36,3 +35,4 @@ public class TestHello {
 	}
 	
 }
+
