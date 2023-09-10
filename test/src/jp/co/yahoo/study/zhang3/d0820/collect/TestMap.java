@@ -24,7 +24,6 @@ public class TestMap {
         for(int i = 0; i< 100; i++) {
         	if (i%2==0) {
         		map.put(String.format("%05d", i), "xxx"+i);
-        		// 五位数显示 000xx
 			}
         }
 
