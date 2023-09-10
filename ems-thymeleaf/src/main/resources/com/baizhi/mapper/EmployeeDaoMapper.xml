@@ -6,7 +6,7 @@
 
 
     <!--lists-->
-    <select id="lists" resultType="Employee">
+    <select id="lists" resultType="com.baizhi.entity.Employee">
         select id,name,salary,birthday,photo from `employee`
     </select>
 

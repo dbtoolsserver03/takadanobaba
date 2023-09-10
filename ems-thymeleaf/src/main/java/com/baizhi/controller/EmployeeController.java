@@ -1,7 +1,11 @@
 package com.baizhi.controller;
 
-import com.baizhi.entity.Employee;
-import com.baizhi.service.EmployeeService;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +15,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import com.baizhi.entity.Employee;
+import com.baizhi.service.EmployeeService;
 
 @Controller
 @RequestMapping("employee")
+
 public class EmployeeController {
 
     private static final Logger log = LoggerFactory.getLogger(EmployeeController.class);
@@ -41,7 +43,9 @@ public class EmployeeController {
      * @return
      */
     @RequestMapping("delete")
-    public String delete(Integer id){
+    // 方法名写什么都可以，主要看方法上面的@RequestMapping是什么
+    public String delete123(Integer id){
+    	
         log.debug("删除的员工id: {}",id);
         //1.删除数据
         String photo = employeeService.findById(id).getPhoto();
@@ -60,7 +64,7 @@ public class EmployeeController {
      * @return
      */
     @RequestMapping("update")
-    public String update(Employee employee, MultipartFile img) throws IOException {
+    public String update(Employee employee, MultipartFile img,Model model) throws IOException {
 
         log.debug("更新之后员工信息: id:{},姓名:{},工资:{},生日:{},", employee.getId(), employee.getName(), employee.getSalary(), employee.getBirthday());
         //1.判断是否更新头像
@@ -77,6 +81,7 @@ public class EmployeeController {
             //3.修改员工新的头像名称
             employee.setPhoto(newFileName);
         }
+        
         //2.没有更新头像直接更新基本信息
         employeeService.update(employee);
         return "redirect:/employee/lists";//更新成功,跳转到员工列表
@@ -114,7 +119,7 @@ public class EmployeeController {
      * @return
      */
     @RequestMapping("save")
-    public String save(Employee employee, MultipartFile img) throws IOException {
+    public String save(Employee employee, MultipartFile img,Model model) throws IOException {
         log.debug("姓名:{}, 薪资:{}, 生日:{} ", employee.getName(), employee.getSalary(), employee.getBirthday());
         String originalFilename = img.getOriginalFilename();
         log.debug("头像名称: {}", originalFilename);
@@ -125,6 +130,16 @@ public class EmployeeController {
         String newFileName = uploadPhoto(img, originalFilename);
         //2.保存员工信息
         employee.setPhoto(newFileName);//保存头像名字
+        
+        
+        
+        if(employee.getSalary()<0) {
+        	model.addAttribute("error", "工资不可以为负数！");
+            return "updateEmp";//更新成功,跳转到员工列表
+        }
+        
+        
+        
         employeeService.save(employee);
         return "redirect:/employee/lists";//保存成功跳转到列表页面
     }
@@ -139,6 +154,12 @@ public class EmployeeController {
         log.debug("查询所有员工信息");
         List<Employee> employeeList = employeeService.lists();
         model.addAttribute("employeeList", employeeList);
+        
+        log.debug("debug...");
+        log.info("info...");
+        log.warn("warn....");
+        log.error("error....");
+        
         return "emplist";
     }
 }
