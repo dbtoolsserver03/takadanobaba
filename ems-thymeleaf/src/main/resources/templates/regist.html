@@ -26,6 +26,10 @@
 				<div id="content">
 					<p id="whereami">
 					</p>
+					
+					<a th:if="${session.user!=null}" th:href="@{/user/logout}">安全退出</a>
+
+					
 					<h1>
 						注册
 					</h1>

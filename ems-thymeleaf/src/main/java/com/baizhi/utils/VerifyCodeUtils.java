@@ -1,7 +1,10 @@
 package com.baizhi.utils;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -11,11 +14,15 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.Random;
 
+import javax.imageio.ImageIO;
+
 /**
  *@创建人  cx
  *@创建时间  2018/11/27 17:36
  *@描述   验证码生成
  */
+
+// ctrl + shift + g
 public class VerifyCodeUtils{
 
     //使用到Algerian字体，系统里没有的话需要安装字体，字体只显示大写，去掉了1,0,i,o几个容易混淆的字符

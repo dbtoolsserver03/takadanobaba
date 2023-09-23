@@ -15,7 +15,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ems-thymeleaf?characterEncoding=UTF-8
     username: root
-    password: 12345678
+    password: 123456
   web:
     resources:
       static-locations: classpath:/static/,file:${photo.file.dir} #暴露哪些资源可以通过项目名访问
@@ -37,5 +37,5 @@ logging:
 # 指定文件上传位置
 photo:
   file:
-    dir: /Users/user/Documents/file/photo
-#    dir: C:\work\file\photo
+#    dir: /Users/user/Documents/file/photo
+    dir: C:\work\file\photo

@@ -81,6 +81,7 @@
 							function deleteEmployee(id){
 								console.log(id);
 								if(window.confirm('确定要删除这条记录吗?')){
+									console.log('[[@{/employee/delete?id=}]]'+id);
 									location.href='[[@{/employee/delete?id=}]]'+id;
 								}
 							}
