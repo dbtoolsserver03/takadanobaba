@@ -155,10 +155,10 @@ public class EmployeeController {
         List<Employee> employeeList = employeeService.lists();
         model.addAttribute("employeeList", employeeList);
         
-        log.debug("debug...");
-        log.info("info...");
-        log.warn("warn....");
-        log.error("error....");
+//        log.debug("debug...");
+//        log.info("info...");
+//        log.warn("warn....");
+//        log.error("error....");
         
         return "emplist";
     }
