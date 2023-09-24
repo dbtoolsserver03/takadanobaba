@@ -50,6 +50,12 @@
 								生日
 							</td>
 							<td>
+								血型
+							</td>
+							<td>
+								爱好
+							</td>
+							<td>
 								操作
 							</td>
 						</tr>
@@ -64,11 +70,18 @@
 								<img th:src="@{/}+${employee.photo}" width="60">
 							</td>
 							<td>
-								<span th:text="${employee.salary}"></span>
+								<span th:text="${employee.vSalary}"></span>
 							</td>
 							<td>
 								<span th:text="${#dates.format(employee.birthday,'yyyy/MM/dd')}"></span>
 							</td>
+							<td>
+								<span th:text="${employee.salary}"></span>
+							</td>
+							<td>
+								<span th:text="${employee.salary}"></span>
+							</td>
+							
 							<td>
 								<a href="javascript:;" th:onclick="'deleteEmployee('+${employee.id}+')'">删除</a>
 <!--								<a th:href="@{/employee/detail?id=}+${employee.id}+'&name='+${employee.name}">更新</a>-->

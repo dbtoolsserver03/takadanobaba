@@ -153,6 +153,11 @@ public class EmployeeController {
     public String lists(Model model) {
         log.debug("查询所有员工信息");
         List<Employee> employeeList = employeeService.lists();
+        
+        for (Employee e : employeeList) {
+			e.setvSalary(String.valueOf(e.getSalary().intValue()) );
+		}
+        
         model.addAttribute("employeeList", employeeList);
         
 //        log.debug("debug...");

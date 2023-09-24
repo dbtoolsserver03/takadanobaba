@@ -8,8 +8,17 @@ public class Employee {
     private Double salary;
     private Date birthday;
     private String photo;//头像路径
+    private String vSalary;
 
-    public Employee() {
+    public String getvSalary() {
+		return vSalary;
+	}
+
+	public void setvSalary(String vSalary) {
+		this.vSalary = vSalary;
+	}
+
+	public Employee() {
     }
 
     public Employee(Integer id, String name, Double salary, Date birthday, String photo) {
