@@ -1,6 +1,6 @@
-package com.baizhi.service;
+package jp.co.saisk.service;
 
-import com.baizhi.entity.User;
+import jp.co.saisk.entity.User;
 
 public interface UserService {
 

@@ -1,4 +1,4 @@
-package com.baizhi.utils;
+package jp.co.saisk.utils;
 
 import java.awt.Color;
 import java.awt.Font;

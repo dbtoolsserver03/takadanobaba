@@ -1,4 +1,4 @@
-package com.baizhi.service;
+package jp.co.saisk.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.baizhi.dao.EmployeeDao;
-import com.baizhi.entity.Employee;
+import jp.co.saisk.dao.EmployeeDao;
+import jp.co.saisk.entity.Employee;
 
 @Service
 @Transactional

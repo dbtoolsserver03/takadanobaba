@@ -22,14 +22,14 @@ spring:
 
 # mybatis配置
 mybatis:
-  mapper-locations: classpath:com/baizhi/mapper/*.xml
-  type-aliases-package: com.baizhi.entity
+  mapper-locations: classpath:jp/co/saisk/mapper/*.xml
+  type-aliases-package: jp.co.saisk.entity
 
 # 日志配置
 logging:
   level:
     root: info
-    com.baizhi: debug
+    jp.co.saisk: debug
 
 
 # 指定文件上传位置

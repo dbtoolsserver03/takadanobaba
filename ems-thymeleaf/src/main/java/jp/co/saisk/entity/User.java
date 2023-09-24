@@ -1,4 +1,4 @@
-package com.baizhi.entity;
+package jp.co.saisk.entity;
 
 public class User {
     private Integer id;

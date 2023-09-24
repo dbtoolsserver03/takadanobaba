@@ -1,4 +1,4 @@
-package com.baizhi.controller;
+package jp.co.saisk.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

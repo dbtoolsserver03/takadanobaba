@@ -1,4 +1,4 @@
-package com.baizhi.controller;
+package jp.co.saisk.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,8 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.baizhi.entity.Employee;
-import com.baizhi.service.EmployeeService;
+import jp.co.saisk.entity.Employee;
+import jp.co.saisk.service.EmployeeService;
 
 @Controller
 @RequestMapping("employee")

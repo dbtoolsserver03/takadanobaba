@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import jp.co.saisk.utils.MyTools;
+
 public class TestMyTools {
 
 	@Test

@@ -1,4 +1,4 @@
-package com.baizhi.controller;
+package jp.co.saisk.controller;
 
 import java.io.IOException;
 
@@ -8,13 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.baizhi.entity.User;
-import com.baizhi.service.UserService;
-import com.baizhi.utils.VerifyCodeUtils;
-
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jp.co.saisk.entity.User;
+import jp.co.saisk.service.UserService;
+import jp.co.saisk.utils.VerifyCodeUtils;
 
 @Controller
 @RequestMapping("user")

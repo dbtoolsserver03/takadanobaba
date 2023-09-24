@@ -1,4 +1,4 @@
-package com.baizhi.utils;
+package jp.co.saisk.utils;
 
 public class MyTools {
 

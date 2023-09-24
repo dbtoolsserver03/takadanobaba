@@ -1,4 +1,4 @@
-package com.baizhi.config;
+package jp.co.saisk.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

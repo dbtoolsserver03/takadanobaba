@@ -1,12 +1,12 @@
-package com.baizhi.service;
-
-import com.baizhi.entity.Employee;
+package jp.co.saisk.dao;
 
 import java.util.List;
 
-public interface EmployeeService {
+import jp.co.saisk.entity.Employee;
 
-    //员工列表方法
+public interface EmployeeDao {
+
+    //员工列表
     List<Employee> lists();
 
     //保存员工信息

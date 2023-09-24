@@ -1,6 +1,6 @@
-package com.baizhi.dao;
+package jp.co.saisk.dao;
 
-import com.baizhi.entity.User;
+import jp.co.saisk.entity.User;
 
 public interface UserDao {
 
